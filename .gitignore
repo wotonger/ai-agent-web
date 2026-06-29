@@ -39,3 +39,6 @@ Thumbs.db
 
 # Test files
 test_payload.json
+
+# SQLite database
+*.db
