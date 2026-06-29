@@ -1,4 +1,4 @@
-# DeepSeek AI Agent - 代码/文档/课程设计助手
+# wotonger AI Agent - 基于deepseek 代码/文档/课程设计助手
 
 一个基于 DeepSeek API 的 Web 端 AI 助手，帮助学生完成代码编写、文档撰写和毕业课程设计。
 
