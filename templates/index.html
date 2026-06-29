@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek AI Agent - 代码/文档/课程设计助手</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo">🤖</div>
+                <h1>AI 学习助手</h1>
+            </div>
+            <div class="mode-section">
+                <p class="section-title">选择助手模式</p>
+                <div class="mode-list">
+                    <button class="mode-btn active" data-mode="code">
+                        <span class="icon">💻</span>
+                        <span class="text">写代码</span>
+                    </button>
+                    <button class="mode-btn" data-mode="document">
+                        <span class="icon">📝</span>
+                        <span class="text">写文档</span>
+                    </button>
+                    <button class="mode-btn" data-mode="course_design">
+                        <span class="icon">🎓</span>
+                        <span class="text">课程设计</span>
+                    </button>
+                    <button class="mode-btn" data-mode="general">
+                        <span class="icon">💬</span>
+                        <span class="text">通用问答</span>
+                    </button>
+                </div>
+            </div>
+            <div class="tips">
+                <p>💡 提示：可粘贴代码、论文题目或课程设计需求。</p>
+            </div>
+            <button class="new-chat" id="newChatBtn">新建对话</button>
+        </aside>
+
+        <main class="chat-container">
+            <header class="chat-header">
+                <div class="current-mode">
+                    <span id="modeIcon">💻</span>
+                    <span id="modeLabel">写代码</span>
+                </div>
+                <div class="status" id="status">准备就绪</div>
+            </header>
+
+            <div class="messages" id="messages">
+                <div class="welcome">
+                    <h2>欢迎使用 DeepSeek AI 助手</h2>
+                    <p>我可以帮你写代码、写文档、辅导课程设计。从左侧切换模式，开始提问吧。</p>
+                    <div class="quick-actions">
+                        <button class="quick-btn" data-prompt="帮我写一个 Python 学生成绩管理系统的核心代码">Python 成绩管理系统</button>
+                        <button class="quick-btn" data-prompt="帮我写一篇关于人工智能在教育中应用的课程论文大纲">AI 教育应用论文大纲</button>
+                        <button class="quick-btn" data-prompt="帮我规划一个基于 Django 的在线商城课程设计">Django 商城课程设计</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-box">
+                    <textarea
+                        id="userInput"
+                        placeholder="输入你的问题，支持粘贴代码..."
+                        rows="1"
+                    ></textarea>
+                    <button class="send-btn" id="sendBtn" disabled>
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="footer-note">内容由 AI 生成，请自行甄别和修改</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
